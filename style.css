@@ -68,7 +68,7 @@ p {
 
 .page:last-child {
   background-color: #fff0f5;
-  color: #d6336c;
+  color: #000;
 }
 
 @media (max-width: 480px) {
