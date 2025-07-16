@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffe6f0;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.book {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: transparent;
+}
+
+.page {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 30px 20px 70px;
+  border-radius: 16px;
+  min-height: 400px;
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1, h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #d6336c;
+}
+
+p {
+  font-size: 1.2em;
+  color: #444;
+  margin-top: 10px;
+}
+
+.page.end {
+  position: relative;
+}
+
+.credit {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1em;
+  color: #999;
+}
+
+.page:last-child {
+  background-color: #fff0f5;
+  color: #d6336c;
+}
+
+@media (max-width: 480px) {
+  .book {
+    max-width: 95%;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .page {
+    padding: 20px 15px 60px;
+    min-height: 350px;
+  }
+
+  .credit {
+    font-size: 0.9em;
+    bottom: 20px;
+  }
+}
